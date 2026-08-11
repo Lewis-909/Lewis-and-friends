@@ -5,13 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lewis & Friends | Anime Universe</title>
+<title>Lewis & Friends | Our Little Universe</title>
 
 <style>
-
-/* =====================================================
-   BASIC RESET
-===================================================== */
 
 * {
     margin: 0;
@@ -27,35 +23,19 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     background:
-        radial-gradient(circle at top, #261344, #0b0713 45%, #040308);
+        radial-gradient(circle at top, #28134b, #0c0714 45%, #040308);
     overflow-x: hidden;
 }
 
-button,
-a {
-    font-family: inherit;
-}
-
-section {
-    padding: 90px 7%;
-}
-
-.container {
-    max-width: 1250px;
-    margin: auto;
-}
-
-
-/* =====================================================
-   STAR BACKGROUND
-===================================================== */
+/* =========================
+   STARS
+========================= */
 
 .stars {
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    overflow: hidden;
 }
 
 .star {
@@ -64,13 +44,13 @@ section {
     height: 3px;
     border-radius: 50%;
     background: white;
-    opacity: .6;
+    opacity: .5;
     animation: twinkle 3s infinite alternate;
 }
 
 @keyframes twinkle {
     from {
-        opacity: .2;
+        opacity: .15;
         transform: scale(.7);
     }
 
@@ -80,10 +60,9 @@ section {
     }
 }
 
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
+/* =========================
+   NAVBAR
+========================= */
 
 nav {
     position: fixed;
@@ -98,7 +77,7 @@ nav {
 
     padding: 18px 7%;
 
-    background: rgba(5, 4, 10, .8);
+    background: rgba(5, 4, 10, .82);
     backdrop-filter: blur(15px);
 
     border-bottom: 1px solid rgba(255,255,255,.08);
@@ -127,10 +106,9 @@ nav {
     color: #ff63d5;
 }
 
-
-/* =====================================================
+/* =========================
    HERO
-===================================================== */
+========================= */
 
 .hero {
     min-height: 100vh;
@@ -141,7 +119,7 @@ nav {
 
     text-align: center;
 
-    padding-top: 120px;
+    padding: 120px 7% 80px;
 
     background:
         radial-gradient(
@@ -156,13 +134,12 @@ nav {
 }
 
 .hero-emoji {
-    font-size: 6rem;
+    font-size: 5rem;
     margin-bottom: 20px;
     animation: floating 4s ease-in-out infinite;
 }
 
 @keyframes floating {
-
     0%,100% {
         transform: translateY(0);
     }
@@ -170,7 +147,6 @@ nav {
     50% {
         transform: translateY(-15px);
     }
-
 }
 
 .hero h1 {
@@ -232,10 +208,140 @@ nav {
         0 18px 45px rgba(255,67,197,.4);
 }
 
+/* =========================
+   MUST READ NOTICE
+========================= */
 
-/* =====================================================
-   SECTION TITLES
-===================================================== */
+.must-read {
+    padding: 90px 7%;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,60,180,.18),
+            transparent 65%
+        );
+}
+
+.must-read-box {
+    max-width: 950px;
+    margin: auto;
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.025)
+        );
+
+    border: 2px solid rgba(255,99,213,.35);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.45),
+        0 0 50px rgba(255,70,200,.08);
+
+    position: relative;
+}
+
+.must-read-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.must-read-badge {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3fae,
+            #754cff
+        );
+
+    font-size: .8rem;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%,100% {
+        box-shadow: 0 0 0 rgba(255,60,180,0);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(255,60,180,.5);
+    }
+}
+
+.must-read-title h2 {
+    font-size: clamp(2rem, 5vw, 3.3rem);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff63d5,
+            #8d72ff,
+            #62dcff
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.must-read-text {
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: rgba(0,0,0,.25);
+
+    color: #ddd5e5;
+
+    line-height: 2;
+
+    font-size: 1.05rem;
+}
+
+.must-read-text .highlight {
+    color: #ff75d8;
+    font-weight: 900;
+}
+
+.must-read-signature {
+    text-align: right;
+
+    margin-top: 25px;
+
+    color: #ff72d6;
+
+    font-weight: bold;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section {
+    padding: 90px 7%;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+}
 
 .section-title {
     text-align: center;
@@ -262,10 +368,9 @@ nav {
     color: #aaa;
 }
 
-
-/* =====================================================
+/* =========================
    FRIEND CARDS
-===================================================== */
+========================= */
 
 .friends-grid {
     display: grid;
@@ -352,10 +457,9 @@ nav {
     font-weight: bold;
 }
 
-
-/* =====================================================
-   ANIME SECTION
-===================================================== */
+/* =========================
+   ANIME
+========================= */
 
 .anime-grid {
     display: grid;
@@ -402,10 +506,9 @@ nav {
     line-height: 1.7;
 }
 
-
-/* =====================================================
-   SPECIAL LEWIS + LYXYANNE
-===================================================== */
+/* =========================
+   SPECIAL SECTION
+========================= */
 
 .special {
     background:
@@ -472,12 +575,10 @@ nav {
 .special-heart {
     font-size: 3rem;
 
-    animation:
-        heartbeat 1.5s infinite;
+    animation: heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat {
-
     0%,100% {
         transform: scale(1);
     }
@@ -485,7 +586,6 @@ nav {
     50% {
         transform: scale(1.18);
     }
-
 }
 
 .special-box h3 {
@@ -511,10 +611,9 @@ nav {
     color: #ff71d8;
 }
 
-
-/* =====================================================
+/* =========================
    BATTLE ARENA
-===================================================== */
+========================= */
 
 .arena {
     background:
@@ -703,10 +802,9 @@ nav {
     color: #ddd;
 }
 
-
-/* =====================================================
-   PROFILE MODAL
-===================================================== */
+/* =========================
+   MODAL
+========================= */
 
 .modal {
     position: fixed;
@@ -824,10 +922,9 @@ nav {
     color: #ff82dd;
 }
 
-
-/* =====================================================
+/* =========================
    INSTAGRAM
-===================================================== */
+========================= */
 
 .instagram-btn {
     display: inline-block;
@@ -857,9 +954,6 @@ nav {
 
 .instagram-btn:hover {
     transform: translateY(-3px) scale(1.03);
-
-    box-shadow:
-        0 10px 30px rgba(253,29,29,.25);
 }
 
 .disabled-instagram {
@@ -870,16 +964,9 @@ nav {
     filter: grayscale(1);
 }
 
-.disabled-instagram:hover {
-    transform: none;
-
-    box-shadow: none;
-}
-
-
-/* =====================================================
+/* =========================
    FOOTER
-===================================================== */
+========================= */
 
 footer {
     padding: 50px 7%;
@@ -896,10 +983,9 @@ footer span {
     color: #ff65d8;
 }
 
-
-/* =====================================================
+/* =========================
    MOBILE
-===================================================== */
+========================= */
 
 @media(max-width: 800px) {
 
@@ -923,12 +1009,9 @@ footer span {
         text-align: center;
     }
 
-    .special-box {
+    .special-box,
+    .must-read-box {
         padding: 25px 18px;
-    }
-
-    .special-photos {
-        gap: 8px;
     }
 
     .special-photo {
@@ -940,6 +1023,10 @@ footer span {
         font-size: 3rem;
     }
 
+    .must-read-text {
+        padding: 20px;
+        font-size: .95rem;
+    }
 }
 
 </style>
@@ -949,9 +1036,9 @@ footer span {
 <body>
 
 
-<!-- =====================================================
-     BACKGROUND
-===================================================== -->
+<!-- =========================
+     BACKGROUND STARS
+========================= -->
 
 <div class="stars">
 
@@ -967,9 +1054,9 @@ footer span {
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      NAVIGATION
-===================================================== -->
+========================= -->
 
 <nav>
 
@@ -981,6 +1068,10 @@ footer span {
 
         <li>
             <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#must-read">Must Read</a>
         </li>
 
         <li>
@@ -1004,9 +1095,9 @@ footer span {
 </nav>
 
 
-<!-- =====================================================
-     WELCOME
-===================================================== -->
+<!-- =========================
+     WELCOME PAGE
+========================= -->
 
 <section class="hero" id="home">
 
@@ -1025,14 +1116,14 @@ footer span {
             and I have a surprise for you.
             <br><br>
 
-            Welcome to my personal universe
-            of friends, anime, manga, memories
-            and absolute chaos.
+            Welcome to my little universe
+            of friends, anime, manga,
+            memories and absolute chaos.
         </p>
 
         <button
             class="next-btn"
-            onclick="document.getElementById('friends').scrollIntoView()">
+            onclick="document.getElementById('must-read').scrollIntoView()">
 
             NEXT →
 
@@ -1044,8 +1135,135 @@ footer span {
 
 
 <!-- =====================================================
-     FRIENDS
+     MUST READ MESSAGE
 ===================================================== -->
+
+<section class="must-read" id="must-read">
+
+    <div class="must-read-box">
+
+        <div class="must-read-title">
+
+            <div class="must-read-badge">
+                🚨 MUST READ 🚨
+            </div>
+
+            <h2>
+                Before You Continue...
+            </h2>
+
+        </div>
+
+
+        <div class="must-read-text">
+
+            <p>
+                <span class="highlight">
+                    Rada guys 😂
+                </span>
+            </p>
+
+            <br>
+
+            <p>
+                Najua some of u mnajiuliza hii shit
+                nia nn. Hi kitu ni about all of u
+                wenye mko hapa. Kama unaona profile
+                yako then wewe ni msee wa nguvu. 😂🔥
+            </p>
+
+            <br>
+
+            <p>
+                Msinijudge, ni venye nilikua nimeboeka
+                nikasema nifanye hii madoido.
+                Nilikaa nikafikiria, “Mbona nisifanye
+                kitu random lakini memorable?”
+                Na ndio hii ikazaliwa. 😂
+            </p>
+
+            <br>
+
+            <p>
+                Lakini jokes aside, <span class="highlight">
+                hii website ni about you guys.
+                </span>
+                Kila mtu ako hapa for a reason,
+                whether tumekuwa tukijuana for years
+                ama tumemeet recently.
+            </p>
+
+            <br>
+
+            <p>
+                Kusikue na mtu atakua left out ama hurt
+                na kazi yangu. As in, ikikuniice
+                <strong>iniambie.</strong>
+                Ikikuboo, <strong>uniambie.</strong>
+                Ukiona nimeandika kitu haikukufurahisha,
+                <strong>niambie.</strong>
+            </p>
+
+            <br>
+
+            <p>
+                Sitaki hii kitu ikuwe sababu ya mtu
+                kujisikia vibaya. I made this just
+                for fun and to appreciate the people
+                ambao wamekuwa part of my life.
+            </p>
+
+            <br>
+
+            <p>
+                Na kama kuna kitu unataka kibadilishwe
+                ama iongezwe kwa profile yako,
+                <span class="highlight">
+                    just tell me.
+                </span>
+            </p>
+
+            <br>
+
+            <p>
+                Basically...
+                <strong>
+                    msinijudge na hii ujinga 😂❤️
+                </strong>
+            </p>
+
+            <br>
+
+            <p>
+                Enjoy the website, check out everyone's
+                profiles, roast each other respectfully,
+                enjoy the anime section, and most
+                importantly...
+            </p>
+
+            <br>
+
+            <p>
+                <span class="highlight">
+                    Nobody gets left behind.
+                    ❤️
+                </span>
+            </p>
+
+            <div class="must-read-signature">
+                — Lewis
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FRIENDS
+========================= -->
 
 <section id="friends">
 
@@ -1074,9 +1292,9 @@ footer span {
 </section>
 
 
-<!-- =====================================================
-     ANIME
-===================================================== -->
+<!-- =========================
+     ANIME SECTION
+========================= -->
 
 <section id="anime">
 
@@ -1128,7 +1346,7 @@ footer span {
                 </h3>
 
                 <p>
-                    Rodney's favorite.
+                    Rodney's favorite anime.
                     Apparently cursed energy wasn't
                     enough — he also needed roast energy.
                 </p>
@@ -1263,7 +1481,6 @@ footer span {
 
             </div>
 
-
         </div>
 
     </div>
@@ -1271,9 +1488,9 @@ footer span {
 </section>
 
 
-<!-- =====================================================
-     LEWIS + LYXYANNE
-===================================================== -->
+<!-- =========================
+     SPECIAL LEWIS + LYXYANNE
+========================= -->
 
 <section class="special" id="special">
 
@@ -1301,8 +1518,7 @@ footer span {
 
                     <img
                         src="images/lewis.jpg"
-                        alt="Lewis"
-                        onerror="this.style.display='none';this.parentElement.innerHTML='👨‍💻';this.parentElement.style.fontSize='5rem';this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';">
+                        alt="Lewis">
 
                 </div>
 
@@ -1316,8 +1532,7 @@ footer span {
 
                     <img
                         src="images/lyxyanne.jpg"
-                        alt="Lyxyanne"
-                        onerror="this.style.display='none';this.parentElement.innerHTML='💗';this.parentElement.style.fontSize='5rem';this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';">
+                        alt="Lyxyanne">
 
                 </div>
 
@@ -1372,7 +1587,7 @@ footer span {
                 <br>
 
                 <p>
-                    You're funny, you're interesting,
+                    You're interesting, you're a foodie,
                     you know your manga, and apparently
                     you have the terrifying ability to
                     <strong>read minds</strong>.
@@ -1402,9 +1617,9 @@ footer span {
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      BATTLE ARENA
-===================================================== -->
+========================= -->
 
 <section class="arena" id="arena">
 
@@ -1504,9 +1719,9 @@ footer span {
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
      PROFILE MODAL
-===================================================== -->
+========================= -->
 
 <div
     class="modal"
@@ -1564,9 +1779,9 @@ footer span {
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      FOOTER
-===================================================== -->
+========================= -->
 
 <footer>
 
@@ -1621,7 +1836,7 @@ const characters = [
         likes: "Basketball and fashion",
         hobbies: "Basketball",
         personality: "Comedian who loves dissing people",
-        instagram: "@atomic-truble"
+        instagram: "@rodnyniga"
     },
 
     {
@@ -1638,7 +1853,7 @@ const characters = [
         likes: "Smart conversations",
         hobbies: "—",
         personality: "Antisocial, very smart and funny",
-        instagram: "@mickey._.mellow"
+        instagram: "@mickeyy._.mello"
     },
 
     {
@@ -1655,7 +1870,7 @@ const characters = [
         likes: "Food",
         hobbies: "Being a foodie",
         personality: "Fun, mysterious and loves manga",
-        instagram: "@zes._lxy"
+        instagram: "@zes._lyx"
     },
 
     {
@@ -1669,7 +1884,7 @@ const characters = [
         ability: "🎮 Gamer Rage",
         anime: "One Piece",
         manga: "One Piece",
-        likes: "One Piece",
+        likes: "Gaming and One Piece",
         hobbies: "Gaming",
         personality: "Very chill and occasionally freaky",
         instagram: "@thedevils_footprints"
@@ -1678,7 +1893,7 @@ const characters = [
     {
         name: "Alex",
         image: "alex.jpg",
-        class: "Creation Wizard",
+        class: "Sharp Striker",
         hp: 81,
         attack: 83,
         defense: 68,
@@ -1713,7 +1928,7 @@ const characters = [
     {
         name: "Elvis",
         image: "elvis.jpg",
-        class: "Sound Master",
+        class: "Bread Bandit",
         hp: 87,
         attack: 85,
         defense: 75,
@@ -1723,7 +1938,7 @@ const characters = [
         manga: "—",
         likes: "Food",
         hobbies: "Eating",
-        personality: "Funny and a little clueless",
+        personality: "Funny and just getting started with anime",
         instagram: ""
     },
 
@@ -1740,14 +1955,14 @@ const characters = [
         manga: "—",
         likes: "Making people laugh",
         hobbies: "—",
-        personality: "Funny, smiley and mischievous",
+        personality: "Funny, freaky and loves to smile",
         instagram: "@x_cutter_korra"
     },
 
     {
         name: "James",
         image: "james.jpg",
-        class: "Adventure Knight",
+        class: "Soul Artist",
         hp: 91,
         attack: 88,
         defense: 79,
@@ -1758,13 +1973,13 @@ const characters = [
         likes: "Art",
         hobbies: "Drawing",
         personality: "Creative, reasonable and an amazing artist",
-        instagram: "@jk-artems"
+        instagram: "@jk_artems"
     },
 
     {
         name: "Margaret",
         image: "margaret.jpg",
-        class: "Wise Sage",
+        class: "Friendship Sage",
         hp: 90,
         attack: 74,
         defense: 92,
@@ -1792,6 +2007,7 @@ const characters = [
         likes: "Hanging out with friends",
         hobbies: "Chilling with friends",
         personality: "One worth hanging out with",
+        nickname: "Lonte",
         instagram: "@lontedun6"
     }
 
@@ -1846,7 +2062,7 @@ characters.forEach((character, index) => {
 
 
 /* =====================================================
-   PROFILE
+   PROFILE MODAL
 ===================================================== */
 
 function openProfile(index) {
@@ -1913,7 +2129,7 @@ function openProfile(index) {
             ? `
                 <br><br>
 
-                <strong>🍑 Nickname:</strong>
+                <strong>🏷️ Nickname:</strong>
                 ${character.nickname}
             `
             : ""
@@ -2234,7 +2450,7 @@ function displayFighter(
 
 
 /* =====================================================
-   BATTLE CALCULATOR
+   BATTLE
 ===================================================== */
 
 function runBattle() {
@@ -2364,7 +2580,7 @@ function randomBattle() {
 
 
 /* =====================================================
-   ESC KEY
+   ESCAPE TO CLOSE MODAL
 ===================================================== */
 
 document.addEventListener(

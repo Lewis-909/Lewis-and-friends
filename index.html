@@ -1,13 +1,19 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Lewis & Friends | Our Little Universe</title>
 
 <style>
+
+/* =========================================================
+   GENERAL
+========================================================= */
 
 * {
     margin: 0;
@@ -22,14 +28,22 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+
     background:
-        radial-gradient(circle at top, #28134b, #0c0714 45%, #040308);
+        radial-gradient(
+            circle at top,
+            #28134b,
+            #0c0714 45%,
+            #040308
+        );
+
     overflow-x: hidden;
 }
 
-/* =========================
+
+/* =========================================================
    STARS
-========================= */
+========================================================= */
 
 .stars {
     position: fixed;
@@ -40,15 +54,22 @@ body {
 
 .star {
     position: absolute;
+
     width: 3px;
     height: 3px;
+
     border-radius: 50%;
+
     background: white;
+
     opacity: .5;
-    animation: twinkle 3s infinite alternate;
+
+    animation:
+        twinkle 3s infinite alternate;
 }
 
 @keyframes twinkle {
+
     from {
         opacity: .15;
         transform: scale(.7);
@@ -58,68 +79,97 @@ body {
         opacity: 1;
         transform: scale(1.3);
     }
+
 }
 
-/* =========================
+
+/* =========================================================
    NAVBAR
-========================= */
+========================================================= */
 
 nav {
+
     position: fixed;
+
     top: 0;
     left: 0;
     right: 0;
+
     z-index: 1000;
 
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
     padding: 18px 7%;
 
-    background: rgba(5, 4, 10, .82);
+    background:
+        rgba(5, 4, 10, .82);
+
     backdrop-filter: blur(15px);
 
-    border-bottom: 1px solid rgba(255,255,255,.08);
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+
 }
 
 .logo {
+
     color: #ff63d5;
+
     font-size: 1.4rem;
+
     font-weight: 900;
+
 }
 
 .nav-links {
+
     display: flex;
+
     gap: 25px;
+
     list-style: none;
+
 }
 
 .nav-links a {
+
     color: #ddd;
+
     text-decoration: none;
+
     font-weight: bold;
+
     transition: .3s;
+
 }
 
 .nav-links a:hover {
+
     color: #ff63d5;
+
 }
 
-/* =========================
+
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero {
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
     text-align: center;
 
-    padding: 120px 7% 80px;
+    padding:
+        120px 7% 80px;
 
     background:
         radial-gradient(
@@ -127,19 +177,28 @@ nav {
             rgba(180,60,255,.2),
             transparent 60%
         );
+
 }
 
 .hero-content {
+
     max-width: 850px;
+
 }
 
 .hero-emoji {
+
     font-size: 5rem;
+
     margin-bottom: 20px;
-    animation: floating 4s ease-in-out infinite;
+
+    animation:
+        floating 4s ease-in-out infinite;
+
 }
 
 @keyframes floating {
+
     0%,100% {
         transform: translateY(0);
     }
@@ -147,10 +206,13 @@ nav {
     50% {
         transform: translateY(-15px);
     }
+
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 7vw, 6rem);
+
+    font-size:
+        clamp(3rem, 7vw, 6rem);
 
     background:
         linear-gradient(
@@ -161,30 +223,41 @@ nav {
         );
 
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
 
     margin-bottom: 25px;
+
 }
 
 .hero p {
+
     color: #d1cadc;
+
     line-height: 1.8;
+
     font-size: 1.2rem;
+
     margin-bottom: 35px;
+
 }
 
 .next-btn,
 .main-btn {
+
     border: none;
+
     cursor: pointer;
 
-    padding: 16px 38px;
+    padding:
+        16px 38px;
 
     border-radius: 50px;
 
     color: white;
 
     font-size: 1rem;
+
     font-weight: 900;
 
     background:
@@ -195,24 +268,33 @@ nav {
         );
 
     box-shadow:
-        0 12px 35px rgba(255,67,197,.25);
+        0 12px 35px
+        rgba(255,67,197,.25);
 
     transition: .3s;
+
 }
 
 .next-btn:hover,
 .main-btn:hover {
-    transform: translateY(-4px) scale(1.04);
+
+    transform:
+        translateY(-4px)
+        scale(1.04);
 
     box-shadow:
-        0 18px 45px rgba(255,67,197,.4);
+        0 18px 45px
+        rgba(255,67,197,.4);
+
 }
 
-/* =========================
-   MUST READ NOTICE
-========================= */
+
+/* =========================================================
+   MUST READ
+========================================================= */
 
 .must-read {
+
     padding: 90px 7%;
 
     background:
@@ -221,10 +303,13 @@ nav {
             rgba(255,60,180,.18),
             transparent 65%
         );
+
 }
 
 .must-read-box {
+
     max-width: 950px;
+
     margin: auto;
 
     padding: 45px;
@@ -238,24 +323,33 @@ nav {
             rgba(255,255,255,.025)
         );
 
-    border: 2px solid rgba(255,99,213,.35);
+    border:
+        2px solid
+        rgba(255,99,213,.35);
 
     box-shadow:
-        0 25px 80px rgba(0,0,0,.45),
-        0 0 50px rgba(255,70,200,.08);
+        0 25px 80px
+        rgba(0,0,0,.45),
 
-    position: relative;
+        0 0 50px
+        rgba(255,70,200,.08);
+
 }
 
 .must-read-title {
+
     text-align: center;
+
     margin-bottom: 30px;
+
 }
 
 .must-read-badge {
+
     display: inline-block;
 
-    padding: 8px 18px;
+    padding:
+        8px 18px;
 
     border-radius: 30px;
 
@@ -267,27 +361,38 @@ nav {
         );
 
     font-size: .8rem;
+
     font-weight: 900;
 
     letter-spacing: 1px;
 
     margin-bottom: 15px;
 
-    animation: pulse 2s infinite;
+    animation:
+        pulse 2s infinite;
+
 }
 
 @keyframes pulse {
+
     0%,100% {
-        box-shadow: 0 0 0 rgba(255,60,180,0);
+        box-shadow:
+            0 0 0
+            rgba(255,60,180,0);
     }
 
     50% {
-        box-shadow: 0 0 25px rgba(255,60,180,.5);
+        box-shadow:
+            0 0 25px
+            rgba(255,60,180,.5);
     }
+
 }
 
 .must-read-title h2 {
-    font-size: clamp(2rem, 5vw, 3.3rem);
+
+    font-size:
+        clamp(2rem, 5vw, 3.3rem);
 
     background:
         linear-gradient(
@@ -298,29 +403,38 @@ nav {
         );
 
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
+
 }
 
 .must-read-text {
+
     padding: 30px;
 
     border-radius: 20px;
 
-    background: rgba(0,0,0,.25);
+    background:
+        rgba(0,0,0,.25);
 
     color: #ddd5e5;
 
     line-height: 2;
 
     font-size: 1.05rem;
+
 }
 
 .must-read-text .highlight {
+
     color: #ff75d8;
+
     font-weight: 900;
+
 }
 
 .must-read-signature {
+
     text-align: right;
 
     margin-top: 25px;
@@ -328,28 +442,41 @@ nav {
     color: #ff72d6;
 
     font-weight: bold;
+
 }
 
-/* =========================
-   SECTION
-========================= */
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
 
 section {
-    padding: 90px 7%;
+
+    padding:
+        90px 7%;
+
 }
 
 .container {
+
     max-width: 1250px;
+
     margin: auto;
+
 }
 
 .section-title {
+
     text-align: center;
+
     margin-bottom: 55px;
+
 }
 
 .section-title h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    font-size:
+        clamp(2rem, 5vw, 3.5rem);
 
     background:
         linear-gradient(
@@ -360,28 +487,40 @@ section {
         );
 
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
+
 }
 
 .section-title p {
+
     margin-top: 12px;
+
     color: #aaa;
+
 }
 
-/* =========================
+
+/* =========================================================
    FRIEND CARDS
-========================= */
+========================================================= */
 
 .friends-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(230px, 1fr));
+        repeat(
+            auto-fit,
+            minmax(230px,1fr)
+        );
 
     gap: 25px;
+
 }
 
 .friend-card {
+
     position: relative;
 
     padding: 22px;
@@ -397,41 +536,56 @@ section {
             rgba(255,255,255,.025)
         );
 
-    border: 1px solid rgba(255,255,255,.1);
+    border:
+        1px solid
+        rgba(255,255,255,.1);
 
     cursor: pointer;
 
     transition: .35s;
 
     overflow: hidden;
+
 }
 
 .friend-card:hover {
-    transform: translateY(-10px);
 
-    border-color: #ff63d5;
+    transform:
+        translateY(-10px);
+
+    border-color:
+        #ff63d5;
 
     box-shadow:
-        0 20px 55px rgba(0,0,0,.45);
+        0 20px 55px
+        rgba(0,0,0,.45);
+
 }
 
 .friend-photo {
+
     width: 150px;
     height: 150px;
 
-    margin: 0 auto 18px;
+    margin:
+        0 auto 18px;
 
     border-radius: 50%;
 
     overflow: hidden;
 
-    border: 4px solid rgba(255,99,213,.55);
+    border:
+        4px solid
+        rgba(255,99,213,.55);
 
     box-shadow:
-        0 0 30px rgba(255,99,213,.18);
+        0 0 30px
+        rgba(255,99,213,.18);
+
 }
 
 .friend-photo img {
+
     width: 100%;
     height: 100%;
 
@@ -440,37 +594,60 @@ section {
     display: block;
 
     transition: .4s;
+
 }
 
-.friend-card:hover .friend-photo img {
-    transform: scale(1.1);
+.friend-card:hover
+.friend-photo img {
+
+    transform:
+        scale(1.1);
+
 }
 
 .friend-card h3 {
-    font-size: 1.35rem;
+
+    font-size:
+        1.35rem;
+
     margin-bottom: 8px;
+
 }
 
 .friend-class {
-    color: #ff71d8;
-    font-size: .9rem;
-    font-weight: bold;
+
+    color:
+        #ff71d8;
+
+    font-size:
+        .9rem;
+
+    font-weight:
+        bold;
+
 }
 
-/* =========================
+
+/* =========================================================
    ANIME
-========================= */
+========================================================= */
 
 .anime-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(240px, 1fr));
+        repeat(
+            auto-fit,
+            minmax(240px,1fr)
+        );
 
     gap: 25px;
+
 }
 
 .anime-card {
+
     padding: 30px;
 
     border-radius: 25px;
@@ -482,50 +659,634 @@ section {
             rgba(255,70,190,.05)
         );
 
-    border: 1px solid rgba(255,255,255,.1);
+    border:
+        1px solid
+        rgba(255,255,255,.1);
 
     transition: .3s;
+
 }
 
 .anime-card:hover {
-    transform: translateY(-8px);
-    border-color: #806bff;
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        #806bff;
+
 }
 
 .anime-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
+
+    font-size:
+        3rem;
+
+    margin-bottom:
+        15px;
+
 }
 
 .anime-card h3 {
-    margin-bottom: 10px;
+
+    margin-bottom:
+        10px;
+
 }
 
 .anime-card p {
-    color: #bbb3c8;
-    line-height: 1.7;
+
+    color:
+        #bbb3c8;
+
+    line-height:
+        1.7;
+
 }
 
-/* =========================
-   SPECIAL SECTION
-========================= */
+
+/* =========================================================
+   APPRECIATION GARDEN
+========================================================= */
+
+.appreciation {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        120px 7%;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255,100,190,.18),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(100,120,255,.18),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            180deg,
+            #12091e,
+            #08040d
+        );
+
+}
+
+
+/* Floating decorations */
+
+.floating-flower {
+
+    position: absolute;
+
+    font-size:
+        2rem;
+
+    opacity:
+        .65;
+
+    pointer-events:
+        none;
+
+    animation:
+        flowerFloat
+        linear
+        infinite;
+
+}
+
+.flower1 {
+    left: 5%;
+    top: 10%;
+    animation-duration: 12s;
+}
+
+.flower2 {
+    left: 85%;
+    top: 20%;
+    animation-duration: 15s;
+}
+
+.flower3 {
+    left: 15%;
+    top: 75%;
+    animation-duration: 18s;
+}
+
+.flower4 {
+    left: 75%;
+    top: 80%;
+    animation-duration: 14s;
+}
+
+.flower5 {
+    left: 48%;
+    top: 8%;
+    animation-duration: 16s;
+}
+
+@keyframes flowerFloat {
+
+    0% {
+        transform:
+            translateY(30px)
+            rotate(0deg);
+
+        opacity: .1;
+    }
+
+    25% {
+        opacity: .7;
+    }
+
+    50% {
+        transform:
+            translateY(-30px)
+            rotate(120deg);
+
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .7;
+    }
+
+    100% {
+        transform:
+            translateY(30px)
+            rotate(240deg);
+
+        opacity: .1;
+    }
+
+}
+
+
+/* Appreciation heading */
+
+.appreciation-title {
+
+    text-align:
+        center;
+
+    max-width:
+        850px;
+
+    margin:
+        0 auto 60px;
+
+}
+
+.appreciation-title .small-title {
+
+    display:
+        inline-block;
+
+    padding:
+        9px 20px;
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(255,100,200,.12);
+
+    border:
+        1px solid
+        rgba(255,100,200,.25);
+
+    color:
+        #ff9ce2;
+
+    font-weight:
+        bold;
+
+    margin-bottom:
+        18px;
+
+}
+
+.appreciation-title h2 {
+
+    font-size:
+        clamp(
+            2.4rem,
+            6vw,
+            4.5rem
+        );
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff8edc,
+            #fff,
+            #9ea0ff,
+            #ff8edc
+        );
+
+    background-size:
+        250% auto;
+
+    -webkit-background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    animation:
+        titleShine
+        5s linear
+        infinite;
+
+}
+
+@keyframes titleShine {
+
+    to {
+        background-position:
+            250% center;
+    }
+
+}
+
+.appreciation-title p {
+
+    margin-top:
+        20px;
+
+    color:
+        #c9c1d1;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* Appreciation cards */
+
+.appreciation-grid {
+
+    max-width:
+        1150px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px,1fr)
+        );
+
+    gap:
+        28px;
+
+}
+
+.appreciation-card {
+
+    position:
+        relative;
+
+    padding:
+        38px 30px;
+
+    min-height:
+        430px;
+
+    border-radius:
+        30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.35);
+
+    text-align:
+        center;
+
+    transition:
+        .4s;
+
+    overflow:
+        hidden;
+
+}
+
+.appreciation-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    border-radius:
+        50%;
+
+    top:
+        -90px;
+
+    right:
+        -90px;
+
+    background:
+        rgba(255,100,210,.13);
+
+}
+
+.appreciation-card:hover {
+
+    transform:
+        translateY(-12px)
+        rotateX(2deg);
+
+    border-color:
+        rgba(255,120,220,.5);
+
+    box-shadow:
+        0 30px 80px
+        rgba(255,80,200,.13);
+
+}
+
+.appreciation-icon {
+
+    font-size:
+        4rem;
+
+    margin-bottom:
+        15px;
+
+    animation:
+        gentleBounce
+        3s ease-in-out
+        infinite;
+
+}
+
+@keyframes gentleBounce {
+
+    0%,100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px)
+            rotate(4deg);
+    }
+
+}
+
+.appreciation-card h3 {
+
+    font-size:
+        2rem;
+
+    margin-bottom:
+        15px;
+
+}
+
+.appreciation-card .relationship {
+
+    display:
+        inline-block;
+
+    color:
+        #ff83db;
+
+    font-weight:
+        bold;
+
+    font-size:
+        .9rem;
+
+    margin-bottom:
+        22px;
+
+}
+
+.appreciation-card p {
+
+    color:
+        #d2cbd9;
+
+    line-height:
+        1.9;
+
+    font-size:
+        .98rem;
+
+}
+
+.flower-line {
+
+    margin-top:
+        25px;
+
+    font-size:
+        1.5rem;
+
+    letter-spacing:
+        7px;
+
+}
+
+
+/* =========================================================
+   SPECIAL CRUSH BADGE
+========================================================= */
+
+.crush-zone {
+
+    max-width:
+        850px;
+
+    margin:
+        75px auto 0;
+
+    text-align:
+        center;
+
+}
+
+.crush-card {
+
+    position:
+        relative;
+
+    display:
+        inline-block;
+
+    padding:
+        25px 40px;
+
+    border-radius:
+        25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,70,190,.14),
+            rgba(120,70,255,.12)
+        );
+
+    border:
+        1px solid
+        rgba(255,100,210,.35);
+
+    box-shadow:
+        0 0 40px
+        rgba(255,70,190,.08);
+
+    animation:
+        crushGlow
+        3s ease-in-out
+        infinite;
+
+}
+
+@keyframes crushGlow {
+
+    0%,100% {
+        transform:
+            scale(1);
+
+        box-shadow:
+            0 0 25px
+            rgba(255,70,190,.08);
+    }
+
+    50% {
+        transform:
+            scale(1.03);
+
+        box-shadow:
+            0 0 50px
+            rgba(255,70,190,.25);
+    }
+
+}
+
+.crush-label {
+
+    display:
+        block;
+
+    font-size:
+        .75rem;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #ff8cde;
+
+    font-weight:
+        900;
+
+    margin-bottom:
+        10px;
+
+}
+
+.crush-name {
+
+    font-size:
+        2rem;
+
+    font-weight:
+        900;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff74d7,
+            #fff,
+            #ff74d7
+        );
+
+    -webkit-background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+}
+
+.crush-note {
+
+    margin-top:
+        12px;
+
+    color:
+        #bdb4c7;
+
+    font-size:
+        .9rem;
+
+}
+
+
+/* =========================================================
+   SPECIAL LEWIS + LYXYANNE
+========================================================= */
 
 .special {
+
     background:
         radial-gradient(
             circle at center,
             rgba(255,70,190,.15),
             transparent 65%
         );
+
 }
 
 .special-box {
-    max-width: 950px;
-    margin: auto;
 
-    padding: 50px;
+    max-width:
+        950px;
 
-    border-radius: 35px;
+    margin:
+        auto;
+
+    padding:
+        50px;
+
+    border-radius:
+        35px;
 
     background:
         linear-gradient(
@@ -534,145 +1295,236 @@ section {
             rgba(255,255,255,.025)
         );
 
-    border: 1px solid rgba(255,100,215,.25);
+    border:
+        1px solid
+        rgba(255,100,215,.25);
 
     box-shadow:
-        0 30px 80px rgba(0,0,0,.35);
+        0 30px 80px
+        rgba(0,0,0,.35);
 
-    text-align: center;
+    text-align:
+        center;
+
 }
 
 .special-photos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
 
-    margin-bottom: 25px;
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        20px;
+
+    margin-bottom:
+        25px;
+
 }
 
 .special-photo {
-    width: 150px;
-    height: 150px;
 
-    border-radius: 50%;
+    width:
+        150px;
 
-    overflow: hidden;
+    height:
+        150px;
 
-    border: 4px solid #ff63d5;
+    border-radius:
+        50%;
+
+    overflow:
+        hidden;
+
+    border:
+        4px solid
+        #ff63d5;
 
     box-shadow:
-        0 0 35px rgba(255,99,213,.3);
+        0 0 35px
+        rgba(255,99,213,.3);
+
 }
 
 .special-photo img {
-    width: 100%;
-    height: 100%;
 
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
 }
 
 .special-heart {
-    font-size: 3rem;
 
-    animation: heartbeat 1.5s infinite;
+    font-size:
+        3rem;
+
+    animation:
+        heartbeat
+        1.5s infinite;
+
 }
 
 @keyframes heartbeat {
+
     0%,100% {
-        transform: scale(1);
+        transform:
+            scale(1);
     }
 
     50% {
-        transform: scale(1.18);
+        transform:
+            scale(1.18);
     }
+
 }
 
 .special-box h3 {
-    font-size: 2.3rem;
-    margin-bottom: 25px;
+
+    font-size:
+        2.3rem;
+
+    margin-bottom:
+        25px;
+
 }
 
 .letter {
-    padding: 30px;
 
-    text-align: left;
+    padding:
+        30px;
 
-    line-height: 1.9;
+    text-align:
+        left;
 
-    color: #ddd6e6;
+    line-height:
+        1.9;
 
-    background: rgba(0,0,0,.25);
+    color:
+        #ddd6e6;
 
-    border-radius: 20px;
+    background:
+        rgba(0,0,0,.25);
+
+    border-radius:
+        20px;
+
 }
 
 .letter strong {
-    color: #ff71d8;
+
+    color:
+        #ff71d8;
+
 }
 
-/* =========================
+
+/* =========================================================
    BATTLE ARENA
-========================= */
+========================================================= */
 
 .arena {
+
     background:
         radial-gradient(
             circle at center,
             rgba(120,70,255,.15),
             transparent 65%
         );
+
 }
 
 .battle-select {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 
-    gap: 12px;
+    display:
+        flex;
 
-    margin-bottom: 40px;
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin-bottom:
+        40px;
+
 }
 
 .select-btn {
-    padding: 11px 18px;
 
-    border-radius: 30px;
+    padding:
+        11px 18px;
 
-    border: 1px solid rgba(255,255,255,.15);
+    border-radius:
+        30px;
 
-    background: rgba(255,255,255,.06);
+    border:
+        1px solid
+        rgba(255,255,255,.15);
 
-    color: white;
+    background:
+        rgba(255,255,255,.06);
 
-    cursor: pointer;
+    color:
+        white;
 
-    transition: .3s;
+    cursor:
+        pointer;
+
+    transition:
+        .3s;
+
 }
 
 .select-btn:hover {
-    background: #754dff;
+
+    background:
+        #754dff;
+
 }
 
 .battle-zone {
-    display: grid;
+
+    display:
+        grid;
 
     grid-template-columns:
         1fr auto 1fr;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 25px;
+    gap:
+        25px;
+
 }
 
 .fighter {
-    min-height: 420px;
 
-    padding: 30px;
+    min-height:
+        420px;
 
-    border-radius: 30px;
+    padding:
+        30px;
 
-    text-align: center;
+    border-radius:
+        30px;
+
+    text-align:
+        center;
 
     background:
         linear-gradient(
@@ -681,68 +1533,117 @@ section {
             rgba(255,255,255,.025)
         );
 
-    border: 1px solid rgba(255,255,255,.1);
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
 }
 
 .fighter-photo {
-    width: 130px;
-    height: 130px;
 
-    margin: auto auto 15px;
+    width:
+        130px;
 
-    border-radius: 50%;
+    height:
+        130px;
 
-    overflow: hidden;
+    margin:
+        auto auto 15px;
 
-    border: 4px solid #ff63d5;
+    border-radius:
+        50%;
+
+    overflow:
+        hidden;
+
+    border:
+        4px solid
+        #ff63d5;
+
 }
 
 .fighter-photo img {
-    width: 100%;
-    height: 100%;
 
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
 }
 
 .fighter h3 {
-    font-size: 1.8rem;
+
+    font-size:
+        1.8rem;
+
 }
 
 .fighter-class {
-    color: #ff68d7;
-    margin: 8px 0 25px;
+
+    color:
+        #ff68d7;
+
+    margin:
+        8px 0 25px;
+
 }
 
 .stat {
-    margin: 17px 0;
-    text-align: left;
+
+    margin:
+        17px 0;
+
+    text-align:
+        left;
+
 }
 
 .stat-label {
-    display: flex;
-    justify-content: space-between;
 
-    margin-bottom: 6px;
+    display:
+        flex;
 
-    color: #bbb;
+    justify-content:
+        space-between;
 
-    font-size: .8rem;
+    margin-bottom:
+        6px;
+
+    color:
+        #bbb;
+
+    font-size:
+        .8rem;
+
 }
 
 .stat-bar {
-    height: 8px;
 
-    border-radius: 20px;
+    height:
+        8px;
 
-    overflow: hidden;
+    border-radius:
+        20px;
 
-    background: rgba(255,255,255,.08);
+    overflow:
+        hidden;
+
+    background:
+        rgba(255,255,255,.08);
+
 }
 
 .stat-fill {
-    height: 100%;
 
-    border-radius: 20px;
+    height:
+        100%;
+
+    border-radius:
+        20px;
 
     background:
         linear-gradient(
@@ -750,99 +1651,151 @@ section {
             #ff45c8,
             #7b5cff
         );
+
 }
 
 .special-power {
-    margin-top: 25px;
 
-    padding: 14px;
+    margin-top:
+        25px;
 
-    border-radius: 15px;
+    padding:
+        14px;
 
-    color: #ff9de4;
+    border-radius:
+        15px;
+
+    color:
+        #ff9de4;
 
     background:
         rgba(255,70,200,.1);
 
-    font-weight: bold;
+    font-weight:
+        bold;
+
 }
 
 .vs {
-    font-size: 3rem;
 
-    font-weight: 900;
+    font-size:
+        3rem;
 
-    color: #ff65d8;
+    font-weight:
+        900;
+
+    color:
+        #ff65d8;
 
     text-shadow:
-        0 0 30px #ff45c8;
+        0 0 30px
+        #ff45c8;
+
 }
 
 .battle-controls {
-    text-align: center;
-    margin-top: 35px;
+
+    text-align:
+        center;
+
+    margin-top:
+        35px;
+
 }
 
 .battle-result {
-    max-width: 700px;
 
-    min-height: 60px;
+    max-width:
+        700px;
 
-    margin: 30px auto 0;
+    min-height:
+        60px;
 
-    padding: 20px;
+    margin:
+        30px auto 0;
 
-    border-radius: 20px;
+    padding:
+        20px;
+
+    border-radius:
+        20px;
 
     background:
         rgba(255,255,255,.05);
 
-    text-align: center;
+    text-align:
+        center;
 
-    color: #ddd;
+    color:
+        #ddd;
+
 }
 
-/* =========================
+
+/* =========================================================
    MODAL
-========================= */
+========================================================= */
 
 .modal {
-    position: fixed;
 
-    inset: 0;
+    position:
+        fixed;
 
-    display: none;
+    inset:
+        0;
 
-    align-items: center;
-    justify-content: center;
+    display:
+        none;
 
-    padding: 20px;
+    align-items:
+        center;
 
-    z-index: 2000;
+    justify-content:
+        center;
+
+    padding:
+        20px;
+
+    z-index:
+        2000;
 
     background:
         rgba(0,0,0,.82);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter:
+        blur(10px);
+
 }
 
 .modal.active {
-    display: flex;
+
+    display:
+        flex;
+
 }
 
 .modal-content {
-    position: relative;
 
-    width: 100%;
-    max-width: 650px;
+    position:
+        relative;
 
-    max-height: 90vh;
+    width:
+        100%;
 
-    overflow-y: auto;
+    max-width:
+        650px;
 
-    padding: 40px;
+    max-height:
+        90vh;
 
-    border-radius: 30px;
+    overflow-y:
+        auto;
+
+    padding:
+        40px;
+
+    border-radius:
+        30px;
 
     background:
         linear-gradient(
@@ -851,95 +1804,150 @@ section {
             #0d0b16
         );
 
-    border: 1px solid rgba(255,255,255,.12);
+    border:
+        1px solid
+        rgba(255,255,255,.12);
 
     box-shadow:
-        0 30px 100px rgba(0,0,0,.6);
+        0 30px 100px
+        rgba(0,0,0,.6);
 
-    text-align: center;
+    text-align:
+        center;
+
 }
 
 .close-modal {
-    position: absolute;
 
-    top: 15px;
-    right: 20px;
+    position:
+        absolute;
 
-    border: none;
+    top:
+        15px;
 
-    background: transparent;
+    right:
+        20px;
 
-    color: white;
+    border:
+        none;
 
-    font-size: 2rem;
+    background:
+        transparent;
 
-    cursor: pointer;
+    color:
+        white;
+
+    font-size:
+        2rem;
+
+    cursor:
+        pointer;
+
 }
 
 .modal-photo {
-    width: 190px;
-    height: 190px;
 
-    margin: 0 auto 20px;
+    width:
+        190px;
 
-    border-radius: 50%;
+    height:
+        190px;
 
-    overflow: hidden;
+    margin:
+        0 auto 20px;
 
-    border: 5px solid #ff63d5;
+    border-radius:
+        50%;
 
-    box-shadow:
-        0 0 40px rgba(255,99,213,.3);
+    overflow:
+        hidden;
+
+    border:
+        5px solid
+        #ff63d5;
+
 }
 
 .modal-photo img {
-    width: 100%;
-    height: 100%;
 
-    object-fit: cover;
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
 }
 
 .modal-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 8px;
+
+    font-size:
+        2.5rem;
+
+    margin-bottom:
+        8px;
+
 }
 
 .modal-role {
-    color: #ff65d8;
 
-    font-weight: bold;
+    color:
+        #ff65d8;
 
-    margin-bottom: 25px;
+    font-weight:
+        bold;
+
+    margin-bottom:
+        25px;
+
 }
 
 .modal-description {
-    color: #d2ccdb;
 
-    line-height: 1.8;
+    color:
+        #d2ccdb;
+
+    line-height:
+        1.8;
+
 }
 
 .modal-description strong {
-    color: #ff82dd;
+
+    color:
+        #ff82dd;
+
 }
 
-/* =========================
+
+/* =========================================================
    INSTAGRAM
-========================= */
+========================================================= */
 
 .instagram-btn {
-    display: inline-block;
 
-    margin-top: 25px;
+    display:
+        inline-block;
 
-    padding: 13px 25px;
+    margin-top:
+        25px;
 
-    border-radius: 30px;
+    padding:
+        13px 25px;
 
-    text-decoration: none;
+    border-radius:
+        30px;
 
-    color: white;
+    text-decoration:
+        none;
 
-    font-weight: bold;
+    color:
+        white;
+
+    font-weight:
+        bold;
 
     background:
         linear-gradient(
@@ -949,96 +1957,138 @@ section {
             #fcb045
         );
 
-    transition: .3s;
+    transition:
+        .3s;
+
 }
 
 .instagram-btn:hover {
-    transform: translateY(-3px) scale(1.03);
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
 }
 
 .disabled-instagram {
-    opacity: .35;
 
-    cursor: not-allowed;
+    opacity:
+        .35;
 
-    filter: grayscale(1);
+    cursor:
+        not-allowed;
+
+    filter:
+        grayscale(1);
+
 }
 
-/* =========================
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer {
-    padding: 50px 7%;
 
-    text-align: center;
+    padding:
+        50px 7%;
 
-    color: #777;
+    text-align:
+        center;
+
+    color:
+        #777;
 
     border-top:
-        1px solid rgba(255,255,255,.08);
+        1px solid
+        rgba(255,255,255,.08);
+
 }
 
 footer span {
-    color: #ff65d8;
+
+    color:
+        #ff65d8;
+
 }
 
-/* =========================
-   MOBILE
-========================= */
 
-@media(max-width: 800px) {
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px) {
 
     nav {
-        padding: 15px 5%;
+        padding:
+            15px 5%;
     }
 
     .nav-links {
-        display: none;
+        display:
+            none;
     }
 
     section {
-        padding: 70px 5%;
+        padding:
+            70px 5%;
     }
 
     .battle-zone {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .vs {
-        text-align: center;
+        text-align:
+            center;
     }
 
     .special-box,
     .must-read-box {
-        padding: 25px 18px;
+        padding:
+            25px 18px;
     }
 
     .special-photo {
-        width: 110px;
-        height: 110px;
+        width:
+            110px;
+
+        height:
+            110px;
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size:
+            3rem;
     }
 
     .must-read-text {
-        padding: 20px;
-        font-size: .95rem;
+        padding:
+            20px;
+
+        font-size:
+            .95rem;
     }
+
+    .appreciation-card {
+        min-height:
+            auto;
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     BACKGROUND STARS
-========================= -->
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
 
 <div class="stars">
 
@@ -1054,9 +2104,9 @@ footer span {
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVIGATION
-========================= -->
+===================================================== -->
 
 <nav>
 
@@ -1083,11 +2133,21 @@ footer span {
         </li>
 
         <li>
-            <a href="#special">💗 Special</a>
+            <a href="#appreciation">
+                💐 Appreciation
+            </a>
         </li>
 
         <li>
-            <a href="#arena">Battle</a>
+            <a href="#special">
+                💗 Special
+            </a>
+        </li>
+
+        <li>
+            <a href="#arena">
+                ⚔️ Battle
+            </a>
         </li>
 
     </ul>
@@ -1095,9 +2155,9 @@ footer span {
 </nav>
 
 
-<!-- =========================
-     WELCOME PAGE
-========================= -->
+<!-- =====================================================
+     WELCOME
+===================================================== -->
 
 <section class="hero" id="home">
 
@@ -1112,18 +2172,26 @@ footer span {
         </h1>
 
         <p>
-            My name is <strong>Lewis</strong>
+
+            My name is
+            <strong>Lewis</strong>
             and I have a surprise for you.
+
             <br><br>
 
             Welcome to my little universe
             of friends, anime, manga,
             memories and absolute chaos.
+
         </p>
 
         <button
             class="next-btn"
-            onclick="document.getElementById('must-read').scrollIntoView()">
+            onclick="
+                document
+                .getElementById('must-read')
+                .scrollIntoView()
+            ">
 
             NEXT →
 
@@ -1135,17 +2203,21 @@ footer span {
 
 
 <!-- =====================================================
-     MUST READ MESSAGE
+     MUST READ
 ===================================================== -->
 
-<section class="must-read" id="must-read">
+<section
+    class="must-read"
+    id="must-read">
 
     <div class="must-read-box">
 
         <div class="must-read-title">
 
             <div class="must-read-badge">
+
                 🚨 MUST READ 🚨
+
             </div>
 
             <h2>
@@ -1158,100 +2230,127 @@ footer span {
         <div class="must-read-text">
 
             <p>
+
                 <span class="highlight">
                     Rada guys 😂
                 </span>
+
             </p>
 
             <br>
 
             <p>
+
                 Najua some of u mnajiuliza hii shit
                 nia nn. Hi kitu ni about all of u
                 wenye mko hapa. Kama unaona profile
                 yako then wewe ni msee wa nguvu. 😂🔥
+
             </p>
 
             <br>
 
             <p>
+
                 Msinijudge, ni venye nilikua nimeboeka
                 nikasema nifanye hii madoido.
                 Nilikaa nikafikiria, “Mbona nisifanye
                 kitu random lakini memorable?”
                 Na ndio hii ikazaliwa. 😂
+
             </p>
 
             <br>
 
             <p>
-                Lakini jokes aside, <span class="highlight">
-                hii website ni about you guys.
+
+                Lakini jokes aside,
+                <span class="highlight">
+                    hii website ni about you guys.
                 </span>
+
                 Kila mtu ako hapa for a reason,
                 whether tumekuwa tukijuana for years
                 ama tumemeet recently.
+
             </p>
 
             <br>
 
             <p>
+
                 Kusikue na mtu atakua left out ama hurt
                 na kazi yangu. As in, ikikuniice
                 <strong>iniambie.</strong>
-                Ikikuboo, <strong>uniambie.</strong>
+
+                Ikikuboo,
+                <strong>uniambie.</strong>
+
                 Ukiona nimeandika kitu haikukufurahisha,
                 <strong>niambie.</strong>
+
             </p>
 
             <br>
 
             <p>
+
                 Sitaki hii kitu ikuwe sababu ya mtu
                 kujisikia vibaya. I made this just
                 for fun and to appreciate the people
                 ambao wamekuwa part of my life.
+
             </p>
 
             <br>
 
             <p>
+
                 Na kama kuna kitu unataka kibadilishwe
                 ama iongezwe kwa profile yako,
                 <span class="highlight">
                     just tell me.
                 </span>
+
             </p>
 
             <br>
 
             <p>
+
                 Basically...
+
                 <strong>
                     msinijudge na hii ujinga 😂❤️
                 </strong>
+
             </p>
 
             <br>
 
             <p>
+
                 Enjoy the website, check out everyone's
                 profiles, roast each other respectfully,
                 enjoy the anime section, and most
                 importantly...
+
             </p>
 
             <br>
 
             <p>
+
                 <span class="highlight">
-                    Nobody gets left behind.
-                    ❤️
+                    Nobody gets left behind. ❤️
                 </span>
+
             </p>
 
             <div class="must-read-signature">
+
                 — Lewis
+
             </div>
 
         </div>
@@ -1261,9 +2360,9 @@ footer span {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FRIENDS
-========================= -->
+===================================================== -->
 
 <section id="friends">
 
@@ -1284,7 +2383,6 @@ footer span {
         <div
             class="friends-grid"
             id="friendsGrid">
-
         </div>
 
     </div>
@@ -1292,9 +2390,9 @@ footer span {
 </section>
 
 
-<!-- =========================
-     ANIME SECTION
-========================= -->
+<!-- =====================================================
+     ANIME
+===================================================== -->
 
 <section id="anime">
 
@@ -1488,13 +2586,319 @@ footer span {
 </section>
 
 
-<!-- =========================
-     SPECIAL LEWIS + LYXYANNE
-========================= -->
+<!-- =====================================================
+     NEW APPRECIATION GARDEN
+===================================================== -->
 
-<section class="special" id="special">
+<section
+    class="appreciation"
+    id="appreciation">
+
+
+    <!-- Floating flowers -->
+
+    <div class="floating-flower flower1">
+        🌸
+    </div>
+
+    <div class="floating-flower flower2">
+        🌷
+    </div>
+
+    <div class="floating-flower flower3">
+        🌹
+    </div>
+
+    <div class="floating-flower flower4">
+        🌻
+    </div>
+
+    <div class="floating-flower flower5">
+        💐
+    </div>
+
 
     <div class="container">
+
+
+        <div class="appreciation-title">
+
+            <div class="small-title">
+                💐 A LITTLE SOMETHING FROM LEWIS
+            </div>
+
+            <h2>
+                For The People Who Mean A Lot
+            </h2>
+
+            <p>
+
+                Sometimes you know someone means a lot
+                to you, but actually explaining it is
+                another story.
+
+                <br><br>
+
+                So instead of trying to find the perfect
+                words, I decided to put them here.
+
+                Think of this section as my digital way
+                of sending flowers, appreciation and
+                a few smiles. 🌷
+
+            </p>
+
+        </div>
+
+
+        <!-- =============================================
+             MARGARET
+        ============================================== -->
+
+        <div class="appreciation-grid">
+
+
+            <div class="appreciation-card">
+
+                <div class="appreciation-icon">
+                    🌷
+                </div>
+
+                <h3>
+                    Margaret
+                </h3>
+
+                <div class="relationship">
+                    MY HOMMIE 🤝
+                </div>
+
+                <p>
+
+                    Margaret, we've only known each other
+                    for a relatively short time, but
+                    somehow you've managed to become one
+                    of those people who are just easy to
+                    have around.
+
+                    <br><br>
+
+                    You're funny, kind and friendly,
+                    and honestly, that's something I
+                    appreciate more than I probably say.
+
+                    <br><br>
+
+                    Sometimes a person doesn't have to
+                    be around for years to become
+                    important.
+
+                    <br><br>
+
+                    So yeah...
+
+                    <strong>
+                        you're officially my hommie. 😂❤️
+                    </strong>
+
+                    <br><br>
+
+                    Keep being the person you are.
+                    The world needs more people who can
+                    make others feel welcome.
+
+                </p>
+
+                <div class="flower-line">
+                    🌷 🌸 🌷
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 SALLY
+            ========================================== -->
+
+            <div class="appreciation-card">
+
+                <div class="appreciation-icon">
+                    🌹
+                </div>
+
+                <h3>
+                    Sally
+                </h3>
+
+                <div class="relationship">
+                    BEST FRIEND ENERGY 🫶
+                </div>
+
+                <p>
+
+                    Sally, you're one of those people
+                    who can turn a normal moment into
+                    something funny without even trying.
+
+                    <br><br>
+
+                    From comedy and drama to acting and
+                    cosplaying, you somehow have the
+                    ability to make things more
+                    interesting just by being yourself.
+
+                    <br><br>
+
+                    And honestly, I don't think you
+                    realize how much I appreciate having
+                    you as a best friend.
+
+                    <br><br>
+
+                    The world is already serious enough,
+                    so having someone who can bring
+                    laughter into it is a big deal.
+
+                    <br><br>
+
+                    <strong>
+                        Thank you for being you, Peach. 🍑❤️
+                    </strong>
+
+                    <br><br>
+
+                    Never lose that funny, creative and
+                    slightly chaotic energy.
+
+                </p>
+
+                <div class="flower-line">
+                    🌹 🌸 🌹
+                </div>
+
+            </div>
+
+
+            <!-- =========================================
+                 VALENTINE
+            ========================================== -->
+
+            <div class="appreciation-card">
+
+                <div class="appreciation-icon">
+                    🌻
+                </div>
+
+                <h3>
+                    Valentine
+                </h3>
+
+                <div class="relationship">
+                    MORE THAN YOU KNOW 💛
+                </div>
+
+                <p>
+
+                    Valentine, I'm not really the best
+                    person when it comes to explaining
+                    what people mean to me.
+
+                    <br><br>
+
+                    So I'll just say this:
+
+                    <br><br>
+
+                    <strong>
+                        you've been better to me than
+                        you probably realize.
+                    </strong>
+
+                    <br><br>
+
+                    Your funny personality, your smile
+                    and the way you bring your own energy
+                    into a room are things that shouldn't
+                    be taken for granted.
+
+                    <br><br>
+
+                    You probably don't even know how
+                    much some of those little moments
+                    can mean to someone.
+
+                    <br><br>
+
+                    So keep smiling.
+
+                    <br>
+
+                    Keep being funny.
+
+                    <br>
+
+                    Keep being yourself.
+
+                    <br><br>
+
+                    And whenever you forget that you're
+                    appreciated, hopefully this little
+                    corner of the internet reminds you.
+
+                </p>
+
+                <div class="flower-line">
+                    🌻 🌸 🌻
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =============================================
+             FLOWERS MESSAGE
+        ============================================== -->
+
+        <div class="crush-zone">
+
+            <div class="crush-card">
+
+                <span class="crush-label">
+                    💌 OFFICIAL WEBSITE ANNOUNCEMENT
+                </span>
+
+                <div class="crush-name">
+                    Lyxyanne is my crush. 💗
+                </div>
+
+                <div class="crush-note">
+
+                    Yes, it's on the website now.
+                    There is no going back. 😂
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SPECIAL LEWIS + LYXYANNE
+===================================================== -->
+
+<section
+    class="special"
+    id="special">
+
+    <div class="container">
+
 
         <div class="section-title">
 
@@ -1513,6 +2917,7 @@ footer span {
 
 
             <div class="special-photos">
+
 
                 <div class="special-photo">
 
@@ -1536,6 +2941,7 @@ footer span {
 
                 </div>
 
+
             </div>
 
 
@@ -1546,69 +2952,107 @@ footer span {
 
             <div class="letter">
 
+
                 <p>
+
                     Okay Lyxyanne, let's be serious
                     for a second...
+
                 </p>
+
 
                 <br>
 
+
                 <p>
+
                     I could have written some dramatic
                     anime-style confession with flowers
                     falling from the sky, dramatic music
                     and me standing on a cliff like the
                     main character.
+
                 </p>
+
 
                 <br>
 
+
                 <p>
+
                     But honestly...
+
                 </p>
+
 
                 <br>
 
+
                 <p>
+
                     <strong>
                         I like you. ❤️
                     </strong>
+
                 </p>
+
 
                 <br>
 
+
                 <p>
+
                     There. I said it.
+
                     No Death Note required.
+
                     No complicated plot twist.
+
                     No 47-episode confession arc.
+
                 </p>
+
 
                 <br>
 
+
                 <p>
+
                     You're interesting, you're a foodie,
                     you know your manga, and apparently
                     you have the terrifying ability to
-                    <strong>read minds</strong>.
+                    <strong>
+                        read minds
+                    </strong>.
+
                 </p>
 
+
                 <br>
+
 
                 <p>
+
                     So if you already knew I was going
                     to write this...
+
                     please pretend you didn't.
+
                     😂
+
                 </p>
 
+
                 <br>
+
 
                 <p>
                     — Lewis 💗
                 </p>
 
+
             </div>
+
 
         </div>
 
@@ -1617,13 +3061,16 @@ footer span {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      BATTLE ARENA
-========================= -->
+========================================================= -->
 
-<section class="arena" id="arena">
+<section
+    class="arena"
+    id="arena">
 
     <div class="container">
+
 
         <div class="section-title">
 
@@ -1690,6 +3137,7 @@ footer span {
 
             </div>
 
+
         </div>
 
 
@@ -1714,14 +3162,15 @@ footer span {
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      PROFILE MODAL
-========================= -->
+========================================================= -->
 
 <div
     class="modal"
@@ -1747,8 +3196,11 @@ footer span {
         </div>
 
 
-        <h2 id="modalName">
+        <h2
+            id="modalName">
+
             Friend
+
         </h2>
 
 
@@ -1779,19 +3231,23 @@ footer span {
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
     <p>
+
         Made with ❤️ by
         <span>Lewis</span>
+
     </p>
 
     <p style="margin-top:10px;">
+
         Lewis & Friends Anime Universe © 2026
+
     </p>
 
 </footer>
@@ -1799,216 +3255,407 @@ footer span {
 
 <script>
 
+
 /* =====================================================
    FRIEND DATABASE
 ===================================================== */
 
 const characters = [
 
+
     {
         name: "Lewis",
         image: "lewis.jpg",
         class: "Code Mage",
+
         hp: 92,
         attack: 84,
         defense: 70,
         speed: 88,
+
         ability: "💻 Debug Blast",
+
         anime: "Death Note",
         manga: "—",
+
         likes: "Tech stuff",
+
         hobbies: "Gaming",
-        personality: "Tech lover and future developer",
-        instagram: "@dee_afolabi_"
+
+        personality:
+            "Tech lover and future developer",
+
+        instagram:
+            "@dee_afolabi_"
     },
+
 
     {
         name: "Rodney",
         image: "rodney.jpg",
         class: "Flame Warrior",
+
         hp: 94,
         attack: 91,
         defense: 72,
         speed: 73,
-        ability: "🔥 Roast Inferno",
-        anime: "Jujutsu Kaisen",
-        manga: "—",
-        likes: "Basketball and fashion",
-        hobbies: "Basketball",
-        personality: "Comedian who loves dissing people",
-        instagram: "@rodnyniga"
+
+        ability:
+            "🔥 Roast Inferno",
+
+        anime:
+            "Jujutsu Kaisen",
+
+        manga:
+            "—",
+
+        likes:
+            "Basketball and fashion",
+
+        hobbies:
+            "Basketball",
+
+        personality:
+            "Comedian who loves dissing people",
+
+        instagram:
+            "@rodnyniga"
     },
+
 
     {
         name: "Ryan",
         image: "ryan.jpg",
         class: "Wind Runner",
+
         hp: 78,
         attack: 76,
         defense: 62,
         speed: 99,
-        ability: "🧠 200 IQ Wind",
-        anime: "High School DxD",
-        manga: "—",
-        likes: "Smart conversations",
-        hobbies: "—",
-        personality: "Antisocial, very smart and funny",
-        instagram: "@mickeyy._.mello"
+
+        ability:
+            "🧠 200 IQ Wind",
+
+        anime:
+            "High School DxD",
+
+        manga:
+            "—",
+
+        likes:
+            "Smart conversations",
+
+        hobbies:
+            "—",
+
+        personality:
+            "Antisocial, very smart and funny",
+
+        instagram:
+            "@mickeyy._.mello"
     },
+
 
     {
         name: "Lyxyanne",
         image: "lyxyanne.jpg",
         class: "Manga Enchantress",
+
         hp: 88,
         attack: 86,
         defense: 82,
         speed: 79,
-        ability: "🧠 Mind Reading",
-        anime: "Castlevania",
-        manga: "Shutline",
-        likes: "Food",
-        hobbies: "Being a foodie",
-        personality: "Fun, mysterious and loves manga",
-        instagram: "@zes._lyx"
+
+        ability:
+            "🧠 Mind Reading",
+
+        anime:
+            "Castlevania",
+
+        manga:
+            "Shutline",
+
+        likes:
+            "Food",
+
+        hobbies:
+            "Being a foodie",
+
+        personality:
+            "Fun, mysterious and loves manga",
+
+        instagram:
+            "@zes._lyx"
     },
+
 
     {
         name: "Mark",
         image: "mark.jpg",
         class: "Gamer",
+
         hp: 85,
         attack: 80,
         defense: 89,
         speed: 76,
-        ability: "🎮 Gamer Rage",
-        anime: "One Piece",
-        manga: "One Piece",
-        likes: "Gaming and One Piece",
-        hobbies: "Gaming",
-        personality: "Very chill and occasionally freaky",
-        instagram: "@thedevils_footprints"
+
+        ability:
+            "🎮 Gamer Rage",
+
+        anime:
+            "One Piece",
+
+        manga:
+            "One Piece",
+
+        likes:
+            "Gaming and One Piece",
+
+        hobbies:
+            "Gaming",
+
+        personality:
+            "Very chill and occasionally freaky",
+
+        instagram:
+            "@thedevils_footprints"
     },
+
 
     {
         name: "Alex",
         image: "alex.jpg",
         class: "Sharp Striker",
+
         hp: 81,
         attack: 83,
         defense: 68,
         speed: 86,
-        ability: "⚔️ Haki of Sharpness",
-        anime: "One Piece",
-        manga: "—",
-        likes: "Football",
-        hobbies: "Football",
-        personality: "The sharpest guy",
-        instagram: "@lyf_wit_alex"
+
+        ability:
+            "⚔️ Haki of Sharpness",
+
+        anime:
+            "One Piece",
+
+        manga:
+            "—",
+
+        likes:
+            "Football",
+
+        hobbies:
+            "Football",
+
+        personality:
+            "The sharpest guy",
+
+        instagram:
+            "@lyf_wit_alex"
     },
+
 
     {
         name: "Sally",
         image: "sally.jpg",
         class: "Spark Guardian",
+
         hp: 84,
         attack: 89,
         defense: 71,
         speed: 94,
-        ability: "🎭 Character Switch",
-        anime: "—",
-        manga: "—",
-        likes: "Comedy and dramas",
-        hobbies: "Cosplaying and acting",
-        personality: "Naturally funny",
-        nickname: "Peach",
-        instagram: "@spixe_shake9"
+
+        ability:
+            "🎭 Character Switch",
+
+        anime:
+            "—",
+
+        manga:
+            "—",
+
+        likes:
+            "Comedy and dramas",
+
+        hobbies:
+            "Cosplaying and acting",
+
+        personality:
+            "Naturally funny",
+
+        nickname:
+            "Peach",
+
+        instagram:
+            "@spixe_shake9"
     },
+
 
     {
         name: "Elvis",
         image: "elvis.jpg",
         class: "Bread Bandit",
+
         hp: 87,
         attack: 85,
         defense: 75,
         speed: 82,
-        ability: "🍞 Bread Snatch",
-        anime: "Just getting started",
-        manga: "—",
-        likes: "Food",
-        hobbies: "Eating",
-        personality: "Funny and just getting started with anime",
-        instagram: ""
+
+        ability:
+            "🍞 Bread Snatch",
+
+        anime:
+            "Just getting started",
+
+        manga:
+            "—",
+
+        likes:
+            "Food",
+
+        hobbies:
+            "Eating",
+
+        personality:
+            "Funny and just getting started with anime",
+
+        instagram:
+            ""
     },
+
 
     {
         name: "Valentine",
         image: "valentine.jpg",
         class: "Light Guardian",
+
         hp: 96,
         attack: 79,
         defense: 94,
         speed: 72,
-        ability: "😊 Smile Beam",
-        anime: "Blue Box",
-        manga: "—",
-        likes: "Making people laugh",
-        hobbies: "—",
-        personality: "Funny, freaky and loves to smile",
-        instagram: "@x_cutter_korra"
+
+        ability:
+            "😊 Smile Beam",
+
+        anime:
+            "Blue Box",
+
+        manga:
+            "—",
+
+        likes:
+            "Making people laugh",
+
+        hobbies:
+            "—",
+
+        personality:
+            "Funny, freaky and loves to smile",
+
+        instagram:
+            "@x_cutter_korra"
     },
+
 
     {
         name: "James",
         image: "james.jpg",
         class: "Soul Artist",
+
         hp: 91,
         attack: 88,
         defense: 79,
         speed: 85,
-        ability: "🖌️ Soul Sketch",
-        anime: "Bleach",
-        manga: "—",
-        likes: "Art",
-        hobbies: "Drawing",
-        personality: "Creative, reasonable and an amazing artist",
-        instagram: "@jk_artems"
+
+        ability:
+            "🖌️ Soul Sketch",
+
+        anime:
+            "Bleach",
+
+        manga:
+            "—",
+
+        likes:
+            "Art",
+
+        hobbies:
+            "Drawing",
+
+        personality:
+            "Creative, reasonable and an amazing artist",
+
+        instagram:
+            "@jk_artems"
     },
+
 
     {
         name: "Margaret",
         image: "margaret.jpg",
         class: "Friendship Sage",
+
         hp: 90,
         attack: 74,
         defense: 92,
         speed: 70,
-        ability: "🌸 Friendship Aura",
-        anime: "—",
-        manga: "—",
-        likes: "Good company",
-        hobbies: "—",
-        personality: "Funny, kind and friendly",
-        instagram: "@chasey._cheeky"
+
+        ability:
+            "🌸 Friendship Aura",
+
+        anime:
+            "—",
+
+        manga:
+            "—",
+
+        likes:
+            "Good company",
+
+        hobbies:
+            "—",
+
+        personality:
+            "Funny, kind and friendly",
+
+        instagram:
+            "@chasey._cheeky"
     },
+
 
     {
         name: "Walter",
         image: "walter.jpg",
         class: "Wild Card",
+
         hp: 80,
         attack: 98,
         defense: 65,
         speed: 93,
-        ability: "🎲 Random Encounter",
-        anime: "Boruto",
-        manga: "—",
-        likes: "Hanging out with friends",
-        hobbies: "Chilling with friends",
-        personality: "One worth hanging out with",
-        nickname: "Lonte",
-        instagram: "@lontedun6"
+
+        ability:
+            "🎲 Random Encounter",
+
+        anime:
+            "Boruto",
+
+        manga:
+            "—",
+
+        likes:
+            "Hanging out with friends",
+
+        hobbies:
+            "Chilling with friends",
+
+        personality:
+            "One worth hanging out with",
+
+        nickname:
+            "Lonte",
+
+        instagram:
+            "@lontedun6"
     }
 
 ];
@@ -2019,46 +3666,73 @@ const characters = [
 ===================================================== */
 
 const friendsGrid =
-    document.getElementById("friendsGrid");
+    document.getElementById(
+        "friendsGrid"
+    );
 
 
-characters.forEach((character, index) => {
-
-    const card =
-        document.createElement("div");
-
-    card.className =
-        "friend-card";
-
-    card.onclick =
-        () => openProfile(index);
+characters.forEach(
+    (character,index) => {
 
 
-    card.innerHTML = `
-
-        <div class="friend-photo">
-
-            <img
-                src="images/${character.image}"
-                alt="${character.name}"
-                onerror="this.style.display='none';this.parentElement.innerHTML='👤';this.parentElement.style.fontSize='4rem';this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';">
-
-        </div>
-
-        <h3>
-            ${character.name}
-        </h3>
-
-        <div class="friend-class">
-            ${character.class}
-        </div>
-
-    `;
+        const card =
+            document.createElement(
+                "div"
+            );
 
 
-    friendsGrid.appendChild(card);
+        card.className =
+            "friend-card";
 
-});
+
+        card.onclick =
+            () => openProfile(index);
+
+
+        card.innerHTML = `
+
+            <div class="friend-photo">
+
+                <img
+                    src="images/${character.image}"
+                    alt="${character.name}"
+
+                    onerror="
+                        this.style.display='none';
+
+                        this.parentElement.innerHTML='👤';
+
+                        this.parentElement.style.fontSize='4rem';
+
+                        this.parentElement.style.display='flex';
+
+                        this.parentElement.style.alignItems='center';
+
+                        this.parentElement.style.justifyContent='center';
+                    "
+                >
+
+            </div>
+
+
+            <h3>
+                ${character.name}
+            </h3>
+
+
+            <div class="friend-class">
+                ${character.class}
+            </div>
+
+        `;
+
+
+        friendsGrid.appendChild(
+            card
+        );
+
+    }
+);
 
 
 /* =====================================================
@@ -2067,12 +3741,15 @@ characters.forEach((character, index) => {
 
 function openProfile(index) {
 
+
     const character =
         characters[index];
 
 
     const modalPhoto =
-        document.getElementById("modalPhoto");
+        document.getElementById(
+            "modalPhoto"
+        );
 
 
     modalPhoto.innerHTML = `
@@ -2080,7 +3757,21 @@ function openProfile(index) {
         <img
             src="images/${character.image}"
             alt="${character.name}"
-            onerror="this.style.display='none';this.parentElement.innerHTML='👤';this.parentElement.style.fontSize='6rem';this.parentElement.style.display='flex';this.parentElement.style.alignItems='center';this.parentElement.style.justifyContent='center';">
+
+            onerror="
+                this.style.display='none';
+
+                this.parentElement.innerHTML='👤';
+
+                this.parentElement.style.fontSize='6rem';
+
+                this.parentElement.style.display='flex';
+
+                this.parentElement.style.alignItems='center';
+
+                this.parentElement.style.justifyContent='center';
+            "
+        >
 
     `;
 
@@ -2101,43 +3792,66 @@ function openProfile(index) {
         "modalDescription"
     ).innerHTML = `
 
-        <strong>🎌 Favorite Anime:</strong>
+        <strong>
+            🎌 Favorite Anime:
+        </strong>
+
         ${character.anime}
 
         <br><br>
 
-        <strong>📚 Favorite Manga:</strong>
+        <strong>
+            📚 Favorite Manga:
+        </strong>
+
         ${character.manga}
 
         <br><br>
 
-        <strong>❤️ Likes:</strong>
+        <strong>
+            ❤️ Likes:
+        </strong>
+
         ${character.likes}
 
         <br><br>
 
-        <strong>🎨 Hobbies:</strong>
+        <strong>
+            🎨 Hobbies:
+        </strong>
+
         ${character.hobbies}
 
         <br><br>
 
-        <strong>😎 Personality:</strong>
+        <strong>
+            😎 Personality:
+        </strong>
+
         ${character.personality}
 
         ${
             character.nickname
-            ? `
+            ?
+            `
                 <br><br>
 
-                <strong>🏷️ Nickname:</strong>
+                <strong>
+                    🏷️ Nickname:
+                </strong>
+
                 ${character.nickname}
             `
-            : ""
+            :
+            ""
         }
 
         <br><br>
 
-        <strong>✨ Special Ability:</strong>
+        <strong>
+            ✨ Special Ability:
+        </strong>
+
         ${character.ability}
 
     `;
@@ -2151,13 +3865,18 @@ function openProfile(index) {
 
     if(character.instagram) {
 
+
         instagram.innerHTML = `
 
             <a
                 href="https://instagram.com/${character.instagram.replace("@","")}"
+
                 target="_blank"
+
                 rel="noopener noreferrer"
-                class="instagram-btn">
+
+                class="instagram-btn"
+            >
 
                 📸 ${character.instagram}
 
@@ -2167,13 +3886,20 @@ function openProfile(index) {
 
     }
 
+
     else {
+
 
         instagram.innerHTML = `
 
             <button
-                class="instagram-btn disabled-instagram"
-                disabled>
+                class="
+                    instagram-btn
+                    disabled-instagram
+                "
+
+                disabled
+            >
 
                 📸 Instagram not added
 
@@ -2185,8 +3911,12 @@ function openProfile(index) {
 
 
     document
-        .getElementById("profileModal")
-        .classList.add("active");
+        .getElementById(
+            "profileModal"
+        )
+        .classList.add(
+            "active"
+        );
 
 
     document.body.style.overflow =
@@ -2197,9 +3927,14 @@ function openProfile(index) {
 
 function closeProfile() {
 
+
     document
-        .getElementById("profileModal")
-        .classList.remove("active");
+        .getElementById(
+            "profileModal"
+        )
+        .classList.remove(
+            "active"
+        );
 
 
     document.body.style.overflow =
@@ -2209,13 +3944,20 @@ function closeProfile() {
 
 
 document
-    .getElementById("profileModal")
+    .getElementById(
+        "profileModal"
+    )
     .addEventListener(
         "click",
         function(event) {
 
-            if(event.target === this) {
+
+            if(
+                event.target === this
+            ) {
+
                 closeProfile();
+
             }
 
         }
@@ -2227,6 +3969,7 @@ document
 ===================================================== */
 
 let fighter1 = null;
+
 let fighter2 = null;
 
 
@@ -2239,8 +3982,11 @@ const fighterButtons =
 characters.forEach(
     (character) => {
 
+
         const button =
-            document.createElement("button");
+            document.createElement(
+                "button"
+            );
 
 
         button.className =
@@ -2253,10 +3999,12 @@ characters.forEach(
 
         button.onclick = () => {
 
+
             if(
                 fighter1 === null ||
                 fighter2 !== null
             ) {
+
 
                 fighter1 =
                     character;
@@ -2275,11 +4023,14 @@ characters.forEach(
                     "fighter2"
                 ).innerHTML = `
 
-                    <div class="fighter-photo">
+                    <div
+                        class="fighter-photo"
+                    >
 
                         <img
                             src="images/${character.image}"
-                            alt="Choose Fighter">
+                            alt="Choose Fighter"
+                        >
 
                     </div>
 
@@ -2297,7 +4048,9 @@ characters.forEach(
 
             }
 
+
             else {
+
 
                 fighter2 =
                     character;
@@ -2333,6 +4086,7 @@ function displayFighter(
     elementId
 ) {
 
+
     const element =
         document.getElementById(
             elementId
@@ -2345,35 +4099,20 @@ function displayFighter(
 
             <img
                 src="images/${character.image}"
-                alt="${character.name}">
+                alt="${character.name}"
+            >
 
         </div>
+
 
         <h3>
             ${character.name}
         </h3>
 
+
         <div class="fighter-class">
+
             ${character.class}
-        </div>
-
-
-        <div class="stat">
-
-            <div class="stat-label">
-                <span>HP</span>
-                <span>${character.hp}</span>
-            </div>
-
-            <div class="stat-bar">
-
-                <div
-                    class="stat-fill"
-                    style="width:${character.hp}%">
-
-                </div>
-
-            </div>
 
         </div>
 
@@ -2381,17 +4120,26 @@ function displayFighter(
         <div class="stat">
 
             <div class="stat-label">
-                <span>ATTACK</span>
-                <span>${character.attack}</span>
+
+                <span>
+                    HP
+                </span>
+
+                <span>
+                    ${character.hp}
+                </span>
+
             </div>
+
 
             <div class="stat-bar">
 
                 <div
                     class="stat-fill"
-                    style="width:${character.attack}%">
-
-                </div>
+                    style="
+                        width:${character.hp}%
+                    "
+                ></div>
 
             </div>
 
@@ -2401,17 +4149,26 @@ function displayFighter(
         <div class="stat">
 
             <div class="stat-label">
-                <span>DEFENSE</span>
-                <span>${character.defense}</span>
+
+                <span>
+                    ATTACK
+                </span>
+
+                <span>
+                    ${character.attack}
+                </span>
+
             </div>
+
 
             <div class="stat-bar">
 
                 <div
                     class="stat-fill"
-                    style="width:${character.defense}%">
-
-                </div>
+                    style="
+                        width:${character.attack}%
+                    "
+                ></div>
 
             </div>
 
@@ -2421,17 +4178,55 @@ function displayFighter(
         <div class="stat">
 
             <div class="stat-label">
-                <span>SPEED</span>
-                <span>${character.speed}</span>
+
+                <span>
+                    DEFENSE
+                </span>
+
+                <span>
+                    ${character.defense}
+                </span>
+
             </div>
+
 
             <div class="stat-bar">
 
                 <div
                     class="stat-fill"
-                    style="width:${character.speed}%">
+                    style="
+                        width:${character.defense}%
+                    "
+                ></div>
 
-                </div>
+            </div>
+
+        </div>
+
+
+        <div class="stat">
+
+            <div class="stat-label">
+
+                <span>
+                    SPEED
+                </span>
+
+                <span>
+                    ${character.speed}
+                </span>
+
+            </div>
+
+
+            <div class="stat-bar">
+
+                <div
+                    class="stat-fill"
+                    style="
+                        width:${character.speed}%
+                    "
+                ></div>
 
             </div>
 
@@ -2455,12 +4250,19 @@ function displayFighter(
 
 function runBattle() {
 
-    if(!fighter1 || !fighter2) {
+
+    if(
+        !fighter1 ||
+        !fighter2
+    ) {
+
         return;
+
     }
 
 
     const score1 =
+
         fighter1.attack +
         fighter1.defense +
         fighter1.speed +
@@ -2468,6 +4270,7 @@ function runBattle() {
 
 
     const score2 =
+
         fighter2.attack +
         fighter2.defense +
         fighter2.speed +
@@ -2477,12 +4280,20 @@ function runBattle() {
     let winner;
 
 
-    if(score1 > score2) {
-        winner = fighter1;
+    if(
+        score1 > score2
+    ) {
+
+        winner =
+            fighter1;
+
     }
 
     else {
-        winner = fighter2;
+
+        winner =
+            fighter2;
+
     }
 
 
@@ -2529,6 +4340,7 @@ function runBattle() {
 
 function randomBattle() {
 
+
     let first =
         Math.floor(
             Math.random() *
@@ -2543,7 +4355,9 @@ function randomBattle() {
         );
 
 
-    while(second === first) {
+    while(
+        second === first
+    ) {
 
         second =
             Math.floor(
@@ -2580,15 +4394,20 @@ function randomBattle() {
 
 
 /* =====================================================
-   ESCAPE TO CLOSE MODAL
+   ESCAPE MODAL
 ===================================================== */
 
 document.addEventListener(
     "keydown",
     function(event) {
 
-        if(event.key === "Escape") {
+
+        if(
+            event.key === "Escape"
+        ) {
+
             closeProfile();
+
         }
 
     }
@@ -2596,6 +4415,8 @@ document.addEventListener(
 
 </script>
 
+
 </body>
+
 </html>
 ```
